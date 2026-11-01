@@ -6,7 +6,7 @@
 
 web
 
-The interface is web-based inside a Windows-first Tauri desktop shell. This value describes the interface technology, not a hosted service.
+The interface is web-based inside a Windows-first Electron desktop shell. This value describes the interface technology, not a hosted service.
 
 ## Users
 
@@ -18,21 +18,21 @@ Help users understand the current cost of a trip, compare equivalent flight and 
 
 ## Operating Context
 
-A Windows computer running the application or its tray process while awake. Saved data remains available offline. No required cloud account, hosted backend, telemetry service, or synchronization.
+A Windows computer running the application. Saved data remains available offline. No required cloud account, paid data service, hosted backend, telemetry service, or synchronization. Closing the window quits; no background scraper runs.
 
 ## Capabilities and Constraints
 
-The first release covers trip and party configuration, bounded flexible searches, automated flight and accommodation collection, comparable history, alerts, a dashboard, and basic budget allocations.
+The first assisted release covers one active trip and party configuration, exact search checklists, user-confirmed flight and accommodation observations, comparable history, alerts, a dashboard, and a total budget.
 
-Automated accommodation rates, relevant airline coverage, permitted observation retention, and approved provider costs are prerequisites. Manual-only collection cannot satisfy the release gate.
+The user approved assisted updates as a replacement for paid/mandatory automatic collection. Source pages open in the external browser without prefilled filters; the user checks conditions and records quote facts. Automated scraping, browser extensions, OCR, flexible-search matrices, exchange rates, and Google email ingestion are not present in this version.
 
 The application records observed prices, not a guaranteed market-wide history. Incomplete fees, stale quotes, indicative prices, and collection failures must remain distinguishable from actionable offers.
 
-Activities, reservations, itinerary planning, and actual expenses follow in a separate release. Automatic booking and payment are outside scope.
+Activities, reservations, itinerary planning, category expenses, and multiple-trip management follow in a separate release. Automatic booking and payment are outside scope.
 
 ## Evidence on Hand
 
-Public provider documentation describes candidate search APIs but does not prove approved access, property or route coverage, or historical retention rights. No live provider proof or runnable app exists yet.
+Public documentation confirms Google's free consumer flight and individual-hotel alerts. These are external features, not a feed into our app. The app's integrated sources are launch links and user-confirmed observations, not verified full airline/property coverage.
 
 ## Product Principles
 

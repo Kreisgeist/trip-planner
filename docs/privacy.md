@@ -6,18 +6,18 @@ Only source, generic documentation, and deliberately synthetic fixtures may be p
 
 Do not copy private planning artifacts into this repository or its issue tracker. Review every staged file before publishing.
 
-## Planned local storage
+## Local storage
 
-Store trip data under the Windows user's application-data directory outside the checkout. Protect credentials through Windows Credential Manager or DPAPI and keep them out of frontend bundles and plain exports.
+Trip data is stored under the Windows user's application-data directory outside the checkout. The app does not collect provider credentials, browser cookies, payment cards or passenger identity documents.
 
 Local SQLite is not inherently encrypted. Document Windows file-permission and disk-encryption assumptions rather than imply local-only storage guarantees encryption.
 
-Price queries disclose necessary itinerary and party fields to the chosen provider. Minimize those fields and explain this boundary during setup. Do not collect passenger names, passport numbers, or full birth dates merely to hunt prices.
+Opening a source discloses ordinary browser connection metadata to that site, but does not submit itinerary or party fields. Copying a checklist writes the trip search facts to the Windows clipboard. Entering filters or enabling Google's tracking on a website is a separate action performed by the user. Do not collect passenger names, passport numbers, or full birth dates merely to hunt prices.
 
 ## Logs, backups, and releases
 
-Redact credentials, signed URLs, and personal request fields. Diagnostic export must provide an opt-in redacted preview.
+No diagnostic-upload service or telemetry is implemented. Do not upload application-data files or personal screenshots to this public repository.
 
-Portable backups should be encrypted and exclude credentials by default. Restores and destructive deletion require explicit confirmation.
+The explicit JSON export contains personal trip configuration and price history and is **not encrypted**. The UI warns about this before opening the save dialog. Keep exports in a protected location; encrypted portable backup is not implemented. Import validates the whole file and merges observations rather than deleting the existing journal.
 
-Public CI and screenshots use synthetic data only. Build artifacts must not include local databases or runtime exports. Supplier content remains subject to its contract; an open-source license does not grant redistribution rights to that data.
+Public fixtures use synthetic data only. Test reports, screenshots, local databases and runtime exports are excluded from publication. The installer packages an explicit source/build allowlist. Supplier content remains subject to its contract; an open-source license does not grant redistribution rights to that data.

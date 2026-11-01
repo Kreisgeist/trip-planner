@@ -1,0 +1,50 @@
+{
+  "name": "trip-planner",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first assisted trip price tracking",
+  "type": "module",
+  "main": "electron/main.mjs",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "tsc --noEmit && vite build",
+    "check": "tsc --noEmit && node --check electron/main.mjs && node --check electron/core.mjs && node --check electron/preload.cjs",
+    "test": "node --test tests/core.test.mjs tests/money.test.mjs",
+    "test:integration": "node scripts/integration.mjs",
+    "test:sources": "node scripts/source-check.mjs",
+    "start": "electron .",
+    "dist:win": "npm run build && electron-builder --win nsis --x64"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.1.0",
+    "electron": "45.2.1",
+    "electron-builder": "26.18.0",
+    "playwright": "^1.56.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.0"
+  },
+  "build": {
+    "appId": "org.tripplanner.desktop",
+    "productName": "Trip Planner",
+    "directories": { "output": "release" },
+    "files": ["dist/**/*", "electron/**/*", "package.json"],
+    "asar": true,
+    "win": {
+      "target": ["nsis"],
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}

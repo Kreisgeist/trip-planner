@@ -2,7 +2,7 @@
 
 ## Decision
 
-**Not ready for full implementation.** Supported automated accommodation access, required live flight coverage, historical-retention rights, and approved provider costs have not been established.
+**Assisted workflow approved.** The user selected a zero-paid-service version that opens ordinary source pages and records confirmed quote facts locally. Mandatory automatic collection is no longer the initial release gate. Automated scraping permission and complete live supplier coverage remain unproven and are not advertised.
 
 This document deliberately contains no personal route, property, party, or budget configuration.
 
@@ -28,7 +28,7 @@ Accommodation distribution APIs do not automatically expose direct-property prom
 5. Match proof quotes to the corresponding authorized booking result within the freshness window and one currency minor unit, or explain a documented discrepancy visibly.
 6. Present complete account costs, request budgets, minimum commitments, and coverage gaps for approval.
 
-A supported automated accommodation source, viable required flight coverage, permitted retention, and approved cost are all necessary to pass.
+These proof requirements still apply to any future automated collector. They do not describe the assisted quote-entry integration implemented in version 0.1.
 
 ## Cost interpretation
 
@@ -36,9 +36,13 @@ Duffel's published excess-search rate supports illustrative scenarios: 1200 char
 
 Unknown provider costs are unknown, not zero. No subscriptions, credentials, live searches, or provider access requests have been created by this repository bootstrap.
 
-## Safe next action
+## Zero-cost consumer integrations
 
-Prepare an account-specific provider decision with authorized access, coverage confirmation, and applicable retention terms. Do not bypass private endpoints or bot restrictions, and do not ship a mock/manual collector as a substitute for the required proof.
+Google Flights offers route, date and flight tracking with email updates. Google's April 2026 announcement also confirms individual-hotel price tracking for signed-in users globally in English and Spanish. The app can open their consumer pages; enabling tracking and receiving email remain outside the app. No Google account is accessed by our code.
+
+Direct supplier links help users verify full party totals and product conditions. Source pages are not prefilled or scraped. Search snippets, marketing "from" amounts, and mismatched room/party dates are not automatically saved as comparable quotes.
+
+For any future collector, review actual site terms and machine-readable instructions. A user gesture or browser permission does not itself authorize scraping. Never bypass private endpoints, CAPTCHA, bot restrictions or rate limits.
 
 ## Sources
 
@@ -50,3 +54,5 @@ Prepare an account-specific provider decision with authorized access, coverage c
 - [Expedia Rapid Lodging overview](https://developers.expediagroup.com/rapid/lodging)
 - [Hotelbeds getting-started guide](https://developer.hotelbeds.com/documentation/getting-started/)
 - [Skyscanner Travel API eligibility](https://www.partners.skyscanner.net/contact/travel-api)
+- [Google Flights tracking help](https://support.google.com/travel/answer/6235879?hl=en)
+- [Google's individual-hotel tracking announcement](https://blog.google/products-and-platforms/products/search/summer-travel-tips-google-search-ai/)

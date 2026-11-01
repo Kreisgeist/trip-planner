@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Provider feasibility only. Do not build or advertise a complete application until automated accommodation access, required flight coverage, historical-retention permission, and provider budget approval are established.
+Version 0.1 is a zero-paid-service assisted quote journal. The user approved opening source pages and recording confirmed facts locally. Do not advertise automatic collection, Google email ingestion, OCR, flexible-date automation or complete supplier coverage.
 
 ## Privacy
 
@@ -12,9 +12,9 @@ Application runtime data must live in per-user application data, not this checko
 
 ## Implementation
 
-Use Tauri 2, React/TypeScript, Rust, and SQLite unless feasibility evidence requires an explicitly documented architecture change.
+Use Electron, React/TypeScript, and built-in SQLite. The available toolchain and required desktop file/notification integrations motivated the initial shell change from the proposed Tauri/Rust stack.
 
-Keep provider adapters separate from comparison rules. Validate inputs in the Rust core. Use exact currency-aware money arithmetic, immutable observations, explicit availability/error states, and source-specific retention limits.
+Keep external-source launch actions separate from comparison rules. Validate inputs and IPC senders in the main process. Use exact currency-aware money arithmetic, immutable observations, explicit error states, and user-confirmed quote facts. Never expose raw IPC or Node access to the renderer.
 
 Do not bypass access controls, CAPTCHA, rate limits, or supplier restrictions. Technical accessibility is not authorization for monitoring or historical storage.
 

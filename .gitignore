@@ -1,6 +1,9 @@
 # Dependencies and generated builds
 node_modules/
 dist/
+release/
+test-results/
+playwright-report/
 target/
 coverage/
 
